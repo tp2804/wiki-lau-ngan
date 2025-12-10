@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trang Wiki - Hồ sơ cá nhân</title>
+  <meta name="description" content="Trang wiki hồ sơ cá nhân " />
+  <style>
+    /* Reset nhẹ */
+    *{box-sizing:border-box}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.6;color:#222;background:#f5f7fb;padding:24px}
+    a{color:#1160d3;text-decoration:none}
+    .container{max-width:1000px;margin:0 auto;background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(12,20,40,0.08);overflow:hidden}
+    header{display:flex;align-items:center;gap:16px;padding:20px;border-bottom:1px solid #e6e9ef;background:linear-gradient(90deg,#fff,#fbfdff)}
+    header h1{font-size:20px;margin:0}
+    header p{margin:0;color:#556}
+
+    .main{display:grid;grid-template-columns:300px 1fr;gap:24px;padding:28px}
+
+    /* Infobox (giống Wikipedia) */
+    .infobox{border:1px solid #e3e6ec;padding:18px;border-radius:6px;background:#fbfdff}
+    .avatar{width:100%;border-radius:6px;overflow:hidden}
+    .avatar img{width:100%;height:auto;display:block}
+    .infobox h2{margin:12px 0 6px;font-size:18px}
+    .infobox .meta{color:#556;font-size:14px}
+    .keyval{display:flex;justify-content:space-between;padding:8px 0;border-top:1px dashed #e9edf5}
+    .keyval:first-of-type{border-top:0}
+
+    /* Nội dung chính */
+    .content h2{border-bottom:2px solid #eef3ff;padding-bottom:8px;margin-top:0}
+    .lead{font-size:15px;color:#334;}
+    .section{margin-bottom:20px}
+    .section p{margin:8px 0}
+
+    /* Timeline đơn giản */
+    .timeline{border-left:3px solid #e6eefc;padding-left:16px;margin-top:8px}
+    .event{margin:12px 0;padding-left:12px}
+    .event .year{font-weight:600}
+
+    /* Footer */
+    footer{padding:12px 20px;border-top:1px solid #eef2fb;color:#667;background:#fcfdff}
+
+    /* Responsive */
+    @media (max-width:820px){
+      .main{grid-template-columns:1fr}
+      .infobox{order:2}
+    }
+
+    /* Small utility */
+    .badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px;border:1px solid #e6eefc;background:#f6fbff}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header style="padding:0;border-bottom:1px solid #ddd;background:#f8f9fa;">
+      <!-- Thanh đầu trang kiểu Wikipedia -->
+      <div style="display:flex;align-items:center;gap:12px;padding:16px 20px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png" alt="Logo" style="width:48px;height:48px;object-fit:contain;filter:grayscale(100%);" />
+        <div>
+          <h1 style="font-size:22px;margin:0;font-weight:600;">Wiki Cá Nhân của Na</h1>
+<p style="margin:0;color:#555;font-size:14px;">Phiên bản mô phỏng giao diện Wikipedia</p>
+        </div>
+      </div>
+
+      <!-- Thanh điều hướng giống Wikipedia -->
+      <nav style="display:flex;gap:20px;padding:10px 20px;border-top:1px solid #e2e2e2;background:#fff;font-size:14px;">
+        <a href="#" style="color:#0645ad;">Trang chính</a>
+        <a href="#" style="color:#0645ad;">Giới thiệu</a>
+        <a href="#" style="color:#0645ad;">Tiểu sử</a>
+        <a href="#" style="color:#0645ad;">Dự án</a>
+        <a href="#contact" style="color:#0645ad;">Liên hệ</a>
+      </nav>
+    </header>
+
+    <div class="main">
+      <!-- Infobox bên trái -->
+      <aside class="infobox" aria-label="Thông tin chính">
+        <div class="avatar">
+          <!-- Thay 'profile.jpg' bằng đường dẫn ảnh thật của bạn -->
+          <img src="z7312141763836_355eea79a24a2a43d65596bbb1e6adc4.jpg" alt="Ảnh đại diện của Ngân" />
+        </div>
+        <h2>Lầu Nguyễn Phương Ngân <span class="badge">Sinh 2009</span></h2>
+        <div class="meta">Đồng Nai, Việt Nam • Học sinh • Yêu thích lập trình & thiết kế</div>
+
+        <div style="margin-top:12px">
+          <div class="keyval"><div>Ngày sinh</div><div>13/03/2009</div></div>
+          <div class="keyval"><div>Ngành</div><div>Thiết kế web & IT</div></div>
+          <div class="keyval"><div>Liên hệ</div><div><a href="https://www.tiktok.com/@geivotri?_r=1&_t=ZS-926GDVoapiq">instagram</a></div></div>
+        </div>
+
+        <h3 style="margin-top:14px;margin-bottom:6px;font-size:15px">Kỹ năng</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">Excel</span>
+          <span class="badge">Vẽ</span>
+        </div>
+      </aside>
+
+      <!-- Nội dung chính bên phải -->
+      <article class="content">
+        <section class="section intro">
+          <h2>Tóm tắt</h2>
+          <p class="lead">Ngân là một học sinh chuyên cần trong hoạt động ngoại khóa, tích cực trong việc phụ giúp thầy, cô. Trang này là ví dụ về cách trình bày thông tin theo phong cách Wikipedia nhưng đơn giản và đẹp trên thiết bị di động.</p>
+        </section>
+
+        <section class="section biography">
+          <h2>Tiểu sử</h2>
+          <p>Ngân sinh ra và lớn lên ở TP.HCM. Từ nhỏ đã thích sử dụng máy tính. Hiện đang học trung cấp và tiếp xúc nhiều với công nghệ.</p>
+          <div class="timeline">
+            <div class="event"><div class="year">2010</div> Đạt giải nhất olympia.</div>
+            <div class="event"><div class="year">2015</div> Đạt cột mốc vòng quanh 20 nước, trong đó có Nga, Đức, Nhật, Thái,...</div>
+            <div class="event"><div class="year">2017</div> Thông thạo 7 thứ tiếng, Nga, Trung,...</div>
+          </div>
+</section>
+
+        <section class="section work">
+          <h2>Dự án nổi bật</h2>
+          <ul>
+            <li><strong>Gara xe</strong> — Thành lập gara xe tại Mỹ.</li>
+            <li><strong>Tham gia olympic</strong> — Đạt huy chương vàng hạng mục taekwondo.</li>
+          </ul>
+        </section>
+
+        <section id="contact" class="section">
+          <h2>Liên hệ</h2>
+          <p>Thay thế thông tin liên hệ bên dưới bằng email hoặc các mạng xã hội của bạn.</p>
+          <p>Email: <a href="laungan1303@gmail.com">laungan1303@gmail.com</a></p>
+          <p>Facebook: <a href="https://www.facebook.com/share/17kuy8qJsG/">https://www.facebook.com/share/17kuy8qJsG/</a></p>
+        </section>
+
+        <section class="section references">
+          <h2>Ghi chú</h2>
+          <p>Trang này là mẫu để bạn chỉnh sửa. Để cập nhật nội dung, mở file HTML và sửa các phần văn bản hoặc đường dẫn ảnh.</p>
+        </section>
+      </article>
+    </div>
+
+    <footer>
+      Ghi chú: Để sử dụng hình ảnh cá nhân, đặt tệp ảnh trong cùng thư mục với file HTML và đổi tên file thành <code>profile.jpg</code> hoặc cập nhật thuộc tính <code>src</code> theo đường dẫn của bạn.
+    </footer>
+  </div>
+
+</body>
+</html>
